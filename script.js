@@ -57,7 +57,6 @@ function getIncludeSpecialChar() {
   includeSpecialChar = window.prompt('Do you want to include special characters [! # $ % & ( ) * +  , - . / : ; < = > ? @ ^ _ ~] in your password? (y/n');
   if (includeSpecialChar.toLowerCase() === 'y'){
     charaterTypesArr.push( '!','#','$','%','&','(',')','*','+',',','-','.','/',':',';','<','=','>','?','@','^','_','~')
-    console.log(charaterTypesArr)
     return
   }else if (includeSpecialChar.toLowerCase() === 'n'){
     return
@@ -79,7 +78,6 @@ function generatePassword (length,array){
   password = '';
   for (i=0; i<length; i++) {
     password = password + array[randomNumber(0,array.length-1)]
-    console.log(password)
   };
   return password
 }
